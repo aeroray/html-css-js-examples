@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2f3542;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+#game {
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.start,
+.restart {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  background-color: #2f3542;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 24px;
+}
+
+.restart {
+  display: none;
+}
+
+.start:hover,
+.restart:hover {
+  background-color: #ff6767;
+}
+
+.scoreBox {
+  position: absolute;
+  top: 18%;
+  color: #fff;
+  font-size: 50px;
+}
+
+.hint {
+  position: absolute;
+  bottom: 20%;
+  font-size: 25px;
+  color: #fff;
+}

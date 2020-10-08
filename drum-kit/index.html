@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drum Kit</title>
+    <link rel="shortcut icon" href="../ray.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="metronome">
+      <button class="switch">Metronome <span class="onoff">OFF</span></button>
+      <div class="bpm">
+        <span class="info">BPM</span>
+        <input type="number" min="1" max="250" value="128" required />
+      </div>
+    </div>
+    <div class="container">
+      <div data-key="65" class="box">
+        <span>A</span>
+        <span>Kick</span>
+      </div>
+      <div data-key="83" class="box">
+        <span>S</span>
+        <span>Snare</span>
+      </div>
+      <div data-key="68" class="box">
+        <span>D</span>
+        <span>Hi Hat</span>
+      </div>
+      <div data-key="70" class="box">
+        <span>F</span>
+        <span>Clap</span>
+      </div>
+      <div data-key="71" class="box">
+        <span>G</span>
+        <span>Snap</span>
+      </div>
+      <div data-key="72" class="box">
+        <span>H</span>
+        <span>Cymbal</span>
+      </div>
+    </div>
+    <audio data-key="65" src="./sounds/Kick.wav"></audio>
+    <audio data-key="83" src="./sounds/Snare.wav"></audio>
+    <audio data-key="68" src="./sounds/Hi Hat.wav"></audio>
+    <audio data-key="70" src="./sounds/Clap.wav"></audio>
+    <audio data-key="71" src="./sounds/Snap.wav"></audio>
+    <audio data-key="72" src="./sounds/Cymbal.wav"></audio>
+    <script src="./main.js"></script>
+  </body>
+</html>
