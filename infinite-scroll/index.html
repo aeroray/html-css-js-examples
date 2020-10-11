@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"
+      integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg=="
+      crossorigin="anonymous"
+    ></script>
+    <title>Infinite Scroll</title>
+  </head>
+  <body>
+    <h1>Infinite Scroll</h1>
+    <div class="filter-container">
+      <input
+        type="text"
+        id="filter"
+        class="filter"
+        placeholder="Search posts..."
+      />
+    </div>
+
+    <div class="post-container" id="post-container"></div>
+
+    <p class="text" id="text">Scroll To Load More...</p>
+    <div class="loader">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
