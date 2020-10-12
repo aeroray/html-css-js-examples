@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #2f3542;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  font-size: 32px;
+}
+
+.container {
+  margin: auto;
+  padding: 20px;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  background-color: #447fff;
+  color: white;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn-toggle {
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.text-box {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -800px);
+  width: 70%;
+  background-color: #eee;
+  color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+}
+
+.text-box select {
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+  height: 30px;
+}
+
+.text-box textarea {
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  font-size: 16px;
+  padding: 8px;
+  margin: 15px 0;
+  width: 100%;
+  height: 150px;
+  outline: none;
+}
+
+.text-box h3 {
+  font-size: 24px;
+}
+
+.text-box .btn {
+  width: 100%;
+}
+
+.text-box .close {
+  float: right;
+  text-align: right;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  color: #777;
+}
+
+.text-box .close:hover {
+  color: #333;
+}
+
+.text-box.show {
+  transform: translate(-50%, 0);
+  opacity: 1;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding: 0 20px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease-out;
+  background-color: #eee;
+  color: #333;
+}
+
+.box.active {
+  box-shadow: 0 0 10px 5px #447fff;
+}
+
+.box img {
+  width: 100%;
+  object-fit: cover;
+  height: 200px;
+}
+
+.box .info {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+}
+
+@media (max-width: 1100px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
